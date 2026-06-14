@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI UI Design Toolkit"
+  short_description: "视觉优先的 PRD、效果图、UI Spec 与实现工具箱"
+  default_prompt: "Use $ai-ui-design-toolkit to turn this product requirement into a PRD, primary-page UI effect images, and then a UI Spec after visual approval."

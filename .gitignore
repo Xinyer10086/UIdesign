@@ -1,0 +1,13 @@
+# 忽略 IDE 和操作系统元文件
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 日志和临时文件
+*.log
+tmp/
