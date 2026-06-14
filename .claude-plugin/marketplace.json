@@ -1,0 +1,11 @@
+{
+  "name": "AI UI Design Toolkit",
+  "description": "视觉优先的 AI UI 设计工具箱 — PRD、效果图、UI Spec、实现、验证、交付端到端",
+  "skills": [
+    {
+      "name": "ai-ui-design-toolkit",
+      "path": "SKILL.md",
+      "description": "Visual-first UI design workflow with 9 composable tools for Chinese product/UI work"
+    }
+  ]
+}
