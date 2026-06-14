@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check SKILL.md frontmatter
+        run: |
+          head -15 SKILL.md | grep "^name:" || (echo "❌ Missing name in SKILL.md frontmatter" && exit 1)
+          head -15 SKILL.md | grep "^description:" || (echo "❌ Missing description in SKILL.md frontmatter" && exit 1)
+
+      - name: Check no Chinese path references
+        run: |
+          FOUND=$(grep -rn "UI效果图" --include="*.md" . || true)
+          if [ -n "$FOUND" ]; then
+            echo "❌ Found Chinese path references:"
+            echo "$FOUND"
+            exit 1
+          fi
+          echo "✅ No Chinese path references found"
+
+      - name: Check no private paths
+        run: |
+          FOUND=$(grep -rn "C:" --include="*.md" . || true)
+          if [ -n "$FOUND" ]; then
+            echo "⚠️ Potential private path(s) found (may be false positive):"
+            echo "$FOUND"
+          fi
+
+      - name: Check LICENSE exists
+        run: |
+          test -f LICENSE || (echo "❌ Missing LICENSE" && exit 1)
+          echo "✅ LICENSE found"
+
+      - name: Verify file structure
+        run: |
+          for f in SKILL.md README.md LICENSE; do
+            test -f "$f" || (echo "❌ Missing $f" && exit 1)
+            echo "✅ $f exists"
+          done
+          test -d references || (echo "❌ Missing references/" && exit 1)
+          echo "✅ references/ exists"
+          test -d examples || (echo "⚠️ examples/ missing" && exit 0)

@@ -180,8 +180,8 @@ Use clear names:
 04-组件实现说明.md
 05-截图对比报告.md
 06-交付清单.md
-UI效果图/01-primary-首页工作台.png
-UI效果图/02-primary-用户管理.png
+mockups/01-primary-首页工作台.png
+mockups/02-primary-用户管理.png
 ```
 
 ## Final Response

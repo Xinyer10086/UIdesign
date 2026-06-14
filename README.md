@@ -109,19 +109,24 @@ git clone https://github.com/Xinyer10086/UIdesign.git ~/.agents/skills/ai-ui-des
 ai-ui-design-toolkit/
 ├── .claude-plugin/
 │   └── marketplace.json       # 插件市场注册信息
+├── .github/workflows/
+│   └── ci.yml                 # CI 验证（frontmatter、路径、LICENSE）
 ├── SKILL.md                   # 主 Skill 文件 — Agent 入口
-├── README.md                  # 本文件
+├── README.md                  # 本文件（你在这里）
+├── CONTRIBUTING.md            # 贡献指南
 ├── LICENSE                    # MIT 许可证
 ├── agents/
-│   └── openai.yaml            # Agent 配置
+│   └── openai.yaml            # Codex Agent 配置
+├── examples/
+│   └── README.md              # 示例输出结构说明
 ├── references/
-│   ├── phase-1-define-spec.md
-│   ├── phase-2-design-spec.md
-│   ├── phase-3-visual-prototype.md
-│   ├── phase-4-6-execution-verification-delivery.md
-│   ├── sdd-six-stage-map.md
-│   ├── toolkit-map.md
-│   └── workflow-checklist.md
+│   ├── phase-1-define-spec.md         # PRD 需求稿模板
+│   ├── phase-2-design-spec.md         # UI Spec 模板
+│   ├── phase-3-visual-prototype.md    # 视觉探索指南
+│   ├── phase-4-6-execution-verification-delivery.md  # 实现/验证/交付
+│   ├── sdd-six-stage-map.md           # 六阶段映射与产物合约
+│   ├── toolkit-map.md                 # 工具箱定位与子工具说明
+│   └── workflow-checklist.md          # 各阶段检查清单
 └── images/                    # 工作流示意图
     └── workflow-*.jpg
 ```
@@ -146,6 +151,10 @@ ai-ui-design-toolkit/
 - 工作流设计受 [Taste Skill](https://x.com/kepano/status/1890882424397713520) 「establish visual target → analyze/structure target → implement/document → verify」方法论启发
 - README 模板遵循 [LearnPrompt House Style](https://github.com/LearnPrompt/learnprompt-house-style)
 
+## 如何贡献
+
+欢迎提交 Issue 和 PR！详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
 ## License
 
 [MIT](LICENSE)
@@ -157,3 +166,4 @@ ai-ui-design-toolkit/
 *先看见，再动手 —— 每个产品都值得一个视觉方向确认的环节*
 
 </div>
+

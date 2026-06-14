@@ -337,7 +337,7 @@ When the user asks for UI effect images:
 5. Save generated images into the user's project folder, usually:
 
 ```text
-UI效果图/
+mockups/
 ```
 
 6. Use stable numbered names:
