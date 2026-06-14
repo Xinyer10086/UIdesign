@@ -41,5 +41,5 @@
 head -10 SKILL.md | grep "^name:\|^description:"
 
 # 确认无中文路径引用
-grep -r "UI效果图" --include="*.md" .
+grep -rn "[\x{4e00}-\x{9fff}]" --include="*.md" . | grep -v "grep -rn" || echo "检查完成"
 ```

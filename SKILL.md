@@ -1,7 +1,7 @@
 ---
 name: ai-ui-design-toolkit
 description: >-
-  Visual-first UI design toolbox for Chinese product/UI work. Use when Codex needs PRD writing, reference-image style extraction, primary-page high-fidelity UI effect images, UI Spec after visual approval, frontend implementation, screenshot comparison, redesign auditor, or delivery archive. Especially use when the user wants UI effect images before UI Spec, primary-page approval before expanding subpages, or end-to-end UI design pipeline rather than a single linear workflow.
+  Visual-first end-to-end UI design pipeline for Chinese product/PM/UI teams. Trigger: PRD/需求文档, 效果图/UI效果图/高保真原型, UI Spec/UI规范, 参考图/风格提取, 审批门/视觉确认, 截图对比/重设计审计, 前端实现/代码实现, 交付/归档. Full pipeline: PRD -> primary-page UI mockups (via agent imagegen, no API key) -> approval -> UI Spec -> frontend code -> screenshot verification -> delivery. Also use as 9 individual composable tools for specific tasks.
   Do NOT use for: writing UI Spec or HTML before visual approval; generating every subpage before primary-page sign-off; inventing unconfirmed business rules.
 ---
 
@@ -200,3 +200,11 @@ Keep the final response evidence-based:
 待确认：
 - [仅列关键问题]
 ```
+
+
+
+## Image Generation Note
+
+This skill generates high-fidelity UI effect images through the Codex agent's built-in image generation capability (\ skill). No external API key, model registration, or paid service is required. The generated images are visual-direction prototypes for human approval, not production-ready assets.
+
+If the agent does not have image generation capability, the skill falls back to generating a detailed prompt pack that can be used with any image generation tool.
